@@ -1,0 +1,46 @@
+/* search and feature sections*/
+
+section{
+    overflow:hidden;
+    width:100%;
+}
+
+
+section#feature_area p {
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+h1{
+    font-size:60px;
+    line-height:96px;
+    margin:4px 0 -4px;
+    text-align:center;
+    font-weight:normal;
+    position:relative;
+    font-family: 'Dancing Script', Georgia, Times, serif;
+}
+
+h2{
+    font-size:30px; line-height:66px; margin:4px 0 -4px; text-align:left; font-weight:normal;position:relative;
+    font-family: 'Dancing Script', Georgia, Times, serif;
+
+}
+
+article#home_page_text{
+    padding:30px;
+    text-align: left;
+
+}
+
+p strong.menu_item{
+    font-weight:900;
+    color:#63a62f;
+}
+
+p strong.importantNote{
+    font-weight:900;
+    color:maroon;
+}

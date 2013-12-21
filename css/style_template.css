@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+    width:960px;
+    margin:0 auto;
+    overflow: hidden;
+    border:1px solid #6b5678;
+}
+
+/*header*/
+header{
+    position:relative;
+    height:140px;
+    margin:10px 0;
+    background:#fff;
+    padding:1px;
+    border-bottom:1px grey solid;
+}
+
+header img#logo{
+    position:absolute;
+    width:125px;
+    height:125px;
+    left:0px;
+    top:0px;
+}
+
+header #page_title{
+    text-align:center;
+}
+
+/*nav*/
+.menu{
+    height:20px;
+    margin:10px 0;
+    padding:1px;
+    padding-bottom: 10px;
+    border-bottom:1px grey solid;
+    font-size:20px;
+}
+.menu ul{
+    overflow:hidden; /*forces ul to enclose floated li elements*/
+}
+
+.menu li{
+    float:left;
+    list-style-type:none;
+}
+
+.menu a{
+    display:block;
+    padding:0 16px;
+    text-decoration:none;
+    color:#999;
+}
+
+.menu li + li a{
+    border-left:1px solid #aaa;
+}
+
+.menu a:hover {
+    color:#555;
+}
+
+/*home page*/
+h1{
+    font-size:60px;
+    line-height:96px;
+    margin:4px 0 -4px;
+    text-align:center;
+    font-weight:normal;
+    position:relative;
+    font-family: 'Dancing Script', Georgia, Times, serif;
+}
+
+h2{
+    font-size:30px; line-height:66px; margin:4px 0 -4px; text-align:left; font-weight:normal;position:relative;
+    font-family: 'Dancing Script', Georgia, Times, serif;
+}
+
+/*footer*/
+footer{
+    font-size:.75em;
+    padding-top:5px;
+    padding-bottom:5px;
+    text-align: center;
+    background:#fff;
+    border-top: grey 1px solid;
+}

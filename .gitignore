@@ -1,0 +1,6 @@
+# PHPStorm files #
+###################
+.idea/
+.iws
+workspace.xml
+tasks.xml
