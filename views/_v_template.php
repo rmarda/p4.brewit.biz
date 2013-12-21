@@ -35,11 +35,11 @@
         </header>
         <nav class ="menu">
             <ul>
-                <li> <a href="#"> Home </a> </li>
+                <li> <a href="/index"> Home </a> </li>
                 <li> <a href="/movies/search"> Search Movie </a> </li>
-                <li> <a href="#"> Now Playing </a> </li>
-                <li> <a href="#"> Upcoming </a> </li>
-                <li> <a href="#"> Watch List </a> </li>
+                <li> <a href="/movies/nowPlaying"> Now Playing </a> </li>
+                <li> <a href="/movies/upcoming"> Upcoming </a> </li>
+                <li> <a href="/movies/watchList"> Watch List </a> </li>
             </ul>
         </nav>
         <!-- Hide User name, logout option and posts nav if no user is logged in-->
