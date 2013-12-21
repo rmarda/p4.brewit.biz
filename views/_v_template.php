@@ -36,7 +36,7 @@
         <nav class ="menu">
             <ul>
                 <li> <a href="#"> Home </a> </li>
-                <li> <a href="#"> Search Movie </a> </li>
+                <li> <a href="/movies/search"> Search Movie </a> </li>
                 <li> <a href="#"> Now Playing </a> </li>
                 <li> <a href="#"> Upcoming </a> </li>
                 <li> <a href="#"> Watch List </a> </li>
