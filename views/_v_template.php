@@ -25,6 +25,12 @@
 
 <body>
     <div id="wrapper">
+
+        <section>
+            <div id='top'>
+                <a href="#top" title="Scroll back to the top">Back to the top</a>
+            </div>
+        </section>
         <header>
             <img id="logo" src="/uploads/images/movie_monkey.jpg" alt="movie_monkey_logo" width="125" height="125" />
             <h1 id='page_title'>Movie Monkey</h1>

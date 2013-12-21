@@ -1,8 +1,6 @@
-<?php
-/**
- * Created by JetBrains PhpStorm.
- * User: rmarda
- * Date: 12/20/13
- * Time: 10:26 PM
- * To change this template use File | Settings | File Templates.
- */
+<section class='page_number_info'>
+</section>
+<section id='feature_area'>
+</section>
+<section class='page_number_info'>
+</section>
