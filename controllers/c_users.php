@@ -93,26 +93,20 @@ class users_controller extends base_controller {
             $data = Array("last_login" => Time::now());
             DB::instance(DB_NAME)->update("users", $data, 'WHERE email = "'.$inputArr['email'].'"' );
 
-            //TODORouter::redirect('/users/profile');
-            // say something like login successful etc. or redirect them to watch list
+            Router::redirect('/index/index');
         }
         else {
             Router::redirect("/users/login/error");
         }
     }
 
-
     public function logout() {
-        echo "This is the logout page";
-    }
 
-    public function profile($user_name = NULL) {
-
-        $this->template->content = View::instance('v_users_profile');
-        $this->template->content->user_name = $user_name;
-
-        echo $this->template;
-
+        $new_token = sha1(TOKEN_SALT.$this->user->email.Utils::generate_random_string());
+        $data = Array('token'=>$new_token);
+        DB::instance(DB_NAME)->update('users', $data, 'WHERE user_id ='. $this->user->user_id);
+        setcookie('token', '', strtotime('-1 year'), '/');
+        Router::redirect('/');
     }
 
 } # end of the class

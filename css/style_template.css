@@ -38,14 +38,14 @@ header #page_title{
     font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
 }
 
-#login_dropdown{
+.login_dropdown{
     position:absolute;
     font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
     right:30px;
     top:2px;
 }
 
-#login_dropdown ul {
+.login_dropdown ul {
     text-align: left;
     display: inline;
     margin: 0;
@@ -54,7 +54,7 @@ header #page_title{
 
 }
 
-#login_dropdown ul li {
+.login_dropdown ul li {
     font: bold 12px/10px sans-serif;
     display: inline-block;
     margin-right: -4px;
@@ -69,12 +69,12 @@ header #page_title{
     transition: all 0.2s;
 }
 
-#login_dropdown ul li:hover {
+.login_dropdown ul li:hover {
     background: #63a62f;
     color: #fff;
 }
 
-#login_dropdown ul li ul {
+.login_dropdown ul li ul {
     padding: 0;
     position: absolute;
     top: 40px;
@@ -93,24 +93,24 @@ header #page_title{
     -transition: opacity 0.2s;
 }
 
-#login_dropdown ul li ul li {
+.login_dropdown ul li ul li {
     background: #555;
     display: block;
     color: #fff;
     text-shadow: 0 -1px 0 #000;
 }
 
-#login_dropdown ul li ul li:hover {
+.login_dropdown ul li ul li:hover {
     background: #666;
 }
 
-#login_dropdown ul li:hover ul {
+.login_dropdown ul li:hover ul {
     display: block;
     opacity: 1;
     visibility: visible;
 }
 
-#login_dropdown a {
+.login_dropdown a {
     color: #fff;
     display:block;
     width: 100%;

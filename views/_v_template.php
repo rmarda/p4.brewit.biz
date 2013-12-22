@@ -33,17 +33,32 @@
         <header>
             <img id="logo" src="/uploads/images/movie_monkey.jpg" alt="movie_monkey_logo" width="125" height="125" />
             <h1 id='page_title'>Movie Monkey</h1>
-            <div id='login_dropdown'>
+
+            <!-- Hide User name, logout option and posts nav if no user is logged in-->
+            <?php if(!$user): ?>
+                <div class='login_dropdown'>
+                    <ul>
+                        <li>
+                            Login
+                            <ul>
+                                <li><a href='/users/login'>Login</a></li>
+                                <li><a href='/users/signup'>Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <?php else:?>
+            <div class='login_dropdown'>
                 <ul>
                     <li>
-                        Login
+                        <h3>Hello <?php echo $user->first_name; ?></h3>
                         <ul>
-                            <li><a href='/users/login'>Login</a></li>
-                            <li><a href='/users/signup'>Register</a></li>
+                            <li><a href='/users/logout'>Logout</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
+            <?php endif; ?></p>
         </header>
         <nav class ="menu">
             <ul>
