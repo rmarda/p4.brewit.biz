@@ -58,7 +58,7 @@
                     </li>
                 </ul>
             </div>
-            <?php endif; ?></p>
+            <?php endif; ?>
         </header>
         <nav class ="menu">
             <ul>
@@ -69,14 +69,6 @@
                 <li> <a href="/movies/watchList"> Watch List </a> </li>
             </ul>
         </nav>
-        <!-- Hide User name, logout option and posts nav if no user is logged in-->
-<!--        --><?php //if(!$user):?>
-<!--            <script>-->
-<!--                document.getElementById('userPref').style.display="none";-->
-<!--                document.getElementById('mainmenu').style.display="none";-->
-<!--            </script>-->
-<!--        --><?php //endif;?>
-
         <?php if(isset($content)) echo $content; ?>
         <footer>
             <p>Movie API from <a href="https://www.themoviedb.org/"> MovieDB.</a> Logo taken from <a href="http://www.logoinstant.com/"> LogoInstant</a></p>
