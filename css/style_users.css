@@ -1,0 +1,179 @@
+
+section#feature_area  article#registration {
+    float:left;
+    width:340px;
+    padding:10px 20px;
+    background:#fff;
+    margin:20px;
+
+}
+
+section#feature_area  article h3{
+    margin:20px auto;
+    text-align:center;
+}
+
+section#feature_area article:nth-child(1) .inner {
+    border-color: #2fb2ed;
+    min-height: 200px;
+}
+
+section#feature_area article p {
+    font-weight:300;
+    font-size:1.15em;
+    line-height:1em;
+    text-align:left;
+    color:#616161;
+}
+/* Registration form fields */
+
+#siginform fieldset p.note {
+
+    color: #1896ff;
+    font-size:0.9em;
+    display:block;
+}
+
+#siginform fieldset p.showerror {
+
+    color:red;
+    font-size:0.9em;
+    display:block;
+}
+
+#siginform fieldset {
+    margin:0;
+    padding: 0 0 .2em 0;
+    width:100%;
+    border:0;
+}
+
+#siginform fieldset section{
+    margin:.6em .6em 0 0; /* right margin ensures label text wraps before touching input */
+    padding-bottom:.2em;
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+    font-size:1.0em;
+    font-weight:400;
+    line-height:1.1;
+    width: 22em;
+    clear: both;
+}
+
+#siginform fieldset section label{
+    float:left;
+    width:8em;
+    margin-bottom:10px;
+
+}
+
+#siginform fieldset section input{
+    float:left;
+    width:12em;
+    margin-bottom:10px;
+}
+
+#siginform fieldset section input[type=submit] {
+    float:none;
+
+}
+
+/*registration form*/
+
+#registration_article {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 66px;
+    padding: 20px 15px;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/** the form elements **/
+#registration_form {
+    box-sizing: border-box;
+}
+
+#registration_form .registration_txtinput {
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dedede;
+    margin-bottom: 20px;
+    font-size: 1em;
+    padding: 11px 25px;
+    padding-left: 10px;
+    width: 90%;
+    color: #777;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+    -webkit-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+    -moz-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+    -o-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+}
+
+#registration_form .registration_txtinput:focus {
+    color: #333;
+    border-color: rgba(41, 92, 161, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+    outline: 0 none;
+}
+
+#registration_form #registration_aligned {
+    box-sizing: border-box;
+    float: left;
+    width: 450px;
+    margin-right: 50px;
+}
+#registration_form #registration_aside {
+    float: left;
+    width: 250px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#registration_wrapping {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#registration_signup_btn {
+    padding-left: 10px;
+}
+
+#registration_article h3{
+    text-align: left;
+}
+
+#registration_form p.showerror {
+
+    color:red;
+    font-size:0.9em;
+    display:block;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+

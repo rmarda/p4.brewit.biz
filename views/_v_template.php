@@ -25,7 +25,6 @@
 
 <body>
     <div id="wrapper">
-
         <section>
             <div id='top'>
                 <a href="#top" title="Scroll back to the top">Back to the top</a>
@@ -34,10 +33,17 @@
         <header>
             <img id="logo" src="/uploads/images/movie_monkey.jpg" alt="movie_monkey_logo" width="125" height="125" />
             <h1 id='page_title'>Movie Monkey</h1>
-<!--            <hgroup id="userPref">-->
-<!--                <h5>Hello --><?php //echo $user->first_name . ' !'; ?><!--</h5>-->
-<!--                <h5><a href="/users/logout">Log Out</a></h5>-->
-<!--            </hgroup>-->
+            <div id='login_dropdown'>
+                <ul>
+                    <li>
+                        Login
+                        <ul>
+                            <li>Login</li>
+                            <li><a href='/users/signup'>Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </header>
         <nav class ="menu">
             <ul>
