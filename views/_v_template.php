@@ -38,8 +38,8 @@
                     <li>
                         Login
                         <ul>
-                            <li>Login</li>
-                            <li><a href='/users/signup'>Register</a></li>
+                            <a href='/users/login'><li>Login</li></a>
+                            <a href='/users/signup'><li>Register</li></a>
                         </ul>
                     </li>
                 </ul>

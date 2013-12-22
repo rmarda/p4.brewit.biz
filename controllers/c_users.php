@@ -5,10 +5,6 @@ class users_controller extends base_controller {
         parent::__construct();
     }
 
-    public function index() {
-        echo "This is the index page";
-    }
-
     public function signup($error = NULL) {
         # Setup view
         $this->template->content = View::instance('v_users_signup');
@@ -59,9 +55,52 @@ class users_controller extends base_controller {
         $this->loginHelper($_POST);
     }
 
-    public function login() {
-        echo "This is the login page";
+    public function login($error = NULL) {
+        # Setup view
+        $this->template->content = View::instance('v_users_login');
+        $this->template->title   = "Log In";
+
+        # Pass data to the view
+        $this->template->content->error = $error;
+
+        # Create an array of 1 or many client files to be included in the head
+        $client_files_head = Array( '/css/style_users.css' );
+
+        # Use load_client_files to generate the links from the above array
+        $this->template->client_files_head = Utils::load_client_files($client_files_head);
+
+        # Render template
+        echo $this->template;
     }
+
+    public function p_login() {
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
+        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+        $this->loginHelper($_POST);
+    }
+
+    /* This is a utility method for logging in. To be used only
+     * by class methods, hence private.
+     */
+    private function loginHelper($inputArr)
+    {
+        $q = 'SELECT token FROM users WHERE email = "'.$inputArr['email'].'" AND password = "'.$inputArr['password'].'"';
+        $token = DB::instance(DB_NAME)->select_field($q);
+        if($token) {
+            setcookie('token', $token, strtotime('+1 year'), '/');
+
+            // set last login time
+            $data = Array("last_login" => Time::now());
+            DB::instance(DB_NAME)->update("users", $data, 'WHERE email = "'.$inputArr['email'].'"' );
+
+            //TODORouter::redirect('/users/profile');
+            // say something like login successful etc. or redirect them to watch list
+        }
+        else {
+            Router::redirect("/users/login/error");
+        }
+    }
+
 
     public function logout() {
         echo "This is the logout page";
