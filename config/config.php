@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'brewitbiz@gmail.com');
 
 # Default DB name for this app
-	define('DB_NAME', 'p4_brewit_biz');
+	define('DB_NAME', 'brewitbi_p4_brewit_biz');
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
