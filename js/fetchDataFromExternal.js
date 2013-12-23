@@ -120,7 +120,15 @@ function parseResults(data) {
 
         var movieDataForRetrieval = '<div class="movieDataHidden"><p>title::::'+movie_name+'::::release_date::::'+release_date+
             '::::rating::::'+vote_average+'::::total_votes::::'+vote_count+'::::poster::::'+image_path +'</p></div>';
-        var articlestr = "<article class='clearfix movieArticleStyle box shadow_effect'>"+imgstr+ datastr+ movieDataForRetrieval+addWatchListBtn+removeWatchListBtn+ "</article>";
+
+
+        if($('section#feature_area').hasClass("user_logged_in"))
+        {
+            var articlestr = "<article class='clearfix movieArticleStyle box shadow_effect'>"+imgstr+ datastr+ movieDataForRetrieval+addWatchListBtn+removeWatchListBtn+ "</article>";
+        }
+        else {
+            var articlestr = "<article class='clearfix movieArticleStyle box shadow_effect'>"+imgstr+ datastr+ movieDataForRetrieval+ "</article>";
+        }
 
         $('section#feature_area ').append(articlestr);
     }
