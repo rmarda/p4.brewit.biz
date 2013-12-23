@@ -182,7 +182,7 @@ input[type=text]{
     width:0;
 }
 
-article#watchList_not_logged{
+article#watchList_empty{
     padding:30px;
     text-align: center;
     color:#555;

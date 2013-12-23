@@ -1,23 +1,29 @@
-/**
- * Created with JetBrains PhpStorm.
- * User: rmarda
- * Date: 12/22/13
- * Time: 5:22 PM
- * To change this template use File | Settings | File Templates.
- *
- *
- * make ajax call to see if a user is logged in
- if yes,
- make further ajax calls to get movie data
- if(no data)
- tell nothing added to watch list yet.
- else
- display data.
- if no, tell user to log in/create account.
- */
 
 //bind back to the top
 $('a[href=#top]').click(function(){
     $('html, body').animate({scrollTop:0}, 'slow');
     return false;
 });
+
+// delete post
+$( ".removeFromWatchList" ).click(function(e) {
+
+    var buttonClicked = $(this);
+    var divClicked = buttonClicked.siblings("div.movieDataHidden").text();
+    var movieClicked = divClicked.split("::::");
+    var articleClicked = buttonClicked.closest("article");
+    $.ajax({
+        type: 'POST',
+        url: '/movies/p_removeFromWatchList',
+        success: function(response) {
+            articleClicked.remove();
+        },
+        data: {
+            // Pass data to the ajax receiver
+            title:movieClicked[1]
+        }
+    });
+
+}); // end delete watch list
+
+
