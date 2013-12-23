@@ -201,8 +201,7 @@ $(document).on("click",".removeWatchListButton", function (event) {
     var buttonClicked = $(this);
     var sectionClicked = buttonClicked.siblings("div.movieDataHidden").text();
     var res = sectionClicked.split("::::");
-    alert(res[1]);
-
+    
     $.ajax({
         type: 'POST',
         url: '/movies/p_removeFromWatchList',
