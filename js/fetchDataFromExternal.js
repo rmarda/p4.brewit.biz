@@ -198,7 +198,6 @@ $(document).on("click",".addWatchListButton", function (event) {
 });
 
 $(document).on("click",".removeWatchListButton", function (event) {
-    alert('here');
     var buttonClicked = $(this);
     var sectionClicked = buttonClicked.siblings("div.movieDataHidden").text();
     var res = sectionClicked.split("::::");
