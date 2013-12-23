@@ -66,6 +66,7 @@ article#search_article{
     text-align: center;
 }
 
+
 div .movieInfoStyle p{
     margin:0px;
     padding:0px;
@@ -77,6 +78,10 @@ div .movieInfoStyle p{
     width:100%;
     padding:20px;
     text-align: center;
+}
+
+.movie_full_info{
+
 }
 
 .box h3{
@@ -159,3 +164,27 @@ input[type=text]{
     text-align: center;
     visibility: hidden;
 }
+
+
+.addWatchListButton{
+    margin:5px;
+    text-align: center;
+}
+
+.removeWatchListButton{
+    margin:5px;
+    text-align: center;
+}
+
+.movieDataHidden{
+    display:none;
+    height:0;
+    width:0;
+}
+
+article#watchList_not_logged{
+    padding:30px;
+    text-align: center;
+    color:#555;
+}
+

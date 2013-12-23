@@ -49,8 +49,7 @@ function fetchDataFromExternal(mode, query, page) {
 
 }
 
-function setConfig(url, key)
-{
+function setConfig(url, key) {
     var configMode = 'configuration';
 
     $.ajax({
@@ -111,12 +110,18 @@ function parseResults(data) {
 
         var infostr = '<p class="movie_name">' + movie_name+ '</p>' +
                       '<p>Release Date: '+release_date+'<br>' +
-                      'Avg. Rating: '+ vote_average + '<br>' +
-                      'Total no. of votes: '+vote_count+'</p>';
+                      'Average Rating: '+ vote_average + '<br>' +
+                      'Total Votes: '+vote_count+'</p>';
 
         var datastr = '<div class="clearfix movieInfoStyle">'+infostr+'</div>';
 
-        var articlestr = "<article class='clearfix movieArticleStyle box shadow_effect'>"+imgstr+ datastr+ "</article>";
+        var addWatchListBtn = '<input type="button" class="addWatchListButton" value="Add To WatchList"><br>';
+        var removeWatchListBtn = '<input type="button" class="removeWatchListButton" value="Remove From WatchList"><br>';
+
+        var movieDataForRetrieval = '<div class="movieDataHidden"><p>title::::'+movie_name+'::::release_date::::'+release_date+
+            '::::rating::::'+vote_average+'::::total_votes::::'+vote_count+'::::poster::::'+image_path +'</p></div>';
+        var articlestr = "<article class='clearfix movieArticleStyle box shadow_effect'>"+imgstr+ datastr+ movieDataForRetrieval+addWatchListBtn+removeWatchListBtn+ "</article>";
+
         $('section#feature_area ').append(articlestr);
     }
     $('section.page_number_info').css('visibility', 'visible');
@@ -155,7 +160,7 @@ $(document).on("click",".next_page", function (event) {
     fetchDataFromExternal(window.currentMode, window.currentQuery + pageQuery);
 });
 
-function testEmpty(data){
+function testEmpty(data) {
 
     if(typeof(data) == 'number' || typeof(data) == 'boolean'){
         return false;
@@ -167,3 +172,48 @@ function testEmpty(data){
         return false;
     }
 }
+
+$(document).on("click",".addWatchListButton", function (event) {
+    var buttonClicked = $(this);
+    var sectionClicked = buttonClicked.siblings("div.movieDataHidden").text();
+    var res = sectionClicked.split("::::");
+
+    $.ajax({
+        type: 'POST',
+        url: '/movies/p_addToWatchList',
+        success: function(response) {
+            // Put the results we get back from the ajax receiver into the results div
+            // confirmation
+        },
+        data: {
+            // Pass data to the ajax receiver
+            title:res[1],
+            release_date:res[3],
+            rating:res[5],
+            total_votes:res[7],
+            poster:res[9]
+        }
+    });
+
+});
+
+$(document).on("click",".removeWatchListButton", function (event) {
+    var buttonClicked = $(this);
+    var sectionClicked = buttonClicked.siblings("div.movieDataHidden").text();
+    var res = sectionClicked.split("::::");
+    alert(res[1]);
+
+    $.ajax({
+        type: 'POST',
+        url: '/movies/p_removeFromWatchList',
+        success: function(response) {
+            // Put the results we get back from the ajax receiver into the results div
+            // confirmation
+
+        },
+        data: {
+            // Pass data to the ajax receiver
+            title:res[1]
+        }
+    });
+});
