@@ -11,6 +11,7 @@
             <strong class = "menu_item">Searh Movie:</strong> You can lookup movie names using a keyword in the search box.<br>
             <strong class = "menu_item">Now Playing:</strong> Lists movies currently playing in theaters.<br>
             <strong class = "menu_item">Upcoming:</strong> Lists movies that are releasing soon.<br>
+            <strong class = "menu_item">WatchList:</strong> Lists movies that you have added to your watch list when logged in.<br>
         </p>
 
         <p>
