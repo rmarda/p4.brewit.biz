@@ -14,7 +14,7 @@ a. Searh Movie: Users can lookup movie names using a keyword search.
 b. List Currently Playing Movies: Lists movies currently playing in theaters. 
 c. List Upcoming Movies: Lists movies that are releasing soon.
 d. Add Movies To WatchList: Users when logged in can add/remove movies to/from their watch list. 
-Please note, this application currently allows adding multiple entries of the same movie to the watch list. This was an conscious decision. 
+Please note, this application currently allows adding multiple entries of the same movie to the watch list for simplicity sakes.  
 
 
 3. What aspects of your application are being managed by JavaScript

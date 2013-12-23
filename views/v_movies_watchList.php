@@ -20,7 +20,7 @@
                     <div class="movieDataHidden">
                         ::::<?=$movie['title']?>::::
                     </div>
-                    <input type="button" class = "removeFromWatchList" value="Remove From WatchList" /><br>
+                    <input type="button" class = "removeFromWatchList removeWatchListButton" value="Remove From WatchList" /><br>
                 </article>
             <?php endforeach; ?>
         <?php endif; ?>

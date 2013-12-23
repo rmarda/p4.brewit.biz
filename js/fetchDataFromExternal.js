@@ -214,8 +214,6 @@ $(document).on("click",".addWatchListButton", function (event) {
             success: function(response) {
                 // Put the results we get back from the ajax receiver into the results div
                 // confirmation
-                $(this).text("Movie Removed");
-
             },
             data: {
                 // Pass data to the ajax receiver

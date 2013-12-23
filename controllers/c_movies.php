@@ -108,6 +108,7 @@ class movies_controller extends base_controller {
     }
 
     public function p_removeFromWatchList() {
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
         $movie = $_POST['title'];
         $where_condition = 'WHERE user_id = '.$this->user->user_id.' AND title ="'.$movie.'"';
         DB::instance(DB_NAME)->delete('movies', $where_condition);

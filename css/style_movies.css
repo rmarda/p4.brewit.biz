@@ -168,12 +168,14 @@ input[type=text]{
 
 .addWatchListButton{
     margin:5px;
+    margin-left:100px;
     text-align: center;
 }
 
 .removeWatchListButton{
     margin:5px;
     text-align: center;
+    margin-left:100px;
 }
 
 .movieDataHidden{
